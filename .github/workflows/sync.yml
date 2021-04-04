@@ -1,0 +1,24 @@
+name: Sync
+on: 
+  push:
+  schedule:
+    - cron:  '0 */6 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 载入文件
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: 设置rclone环境 # 下面像OD,GD这样的盘符你随意改,改成你设置的
+        env:
+          CONF: ${{ secrets.CONF }}
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "$CONF" | tr -d '\r' > ~/.config/rclone/rclone.conf
+          chmod +x ./rclone
+          
+          ./rclone sync -P OD:/ GD:/ --transfers=10 --buffer-size=200M
+          ./rclone sync -P OD:/命运石之门/ SPCN:/ --transfers=10 --buffer-size=200M
