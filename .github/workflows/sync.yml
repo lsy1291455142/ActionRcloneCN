@@ -20,6 +20,4 @@ jobs:
           echo "$CONF" | tr -d '\r' > ~/.config/rclone/rclone.conf
           chmod +x ./rclone
           
-          ./rclone sync -P OD:/ GD:/
-          ./rclone sync -P OD:/ ODE5:/
-          ./rclone sync -P OD:/命运石之门/ SPCN:/ --transfers=10 --buffer-size=200M
+          ./rclone sync -P qita:/ e5:/sync/ --transfers=10 --buffer-size=200M
