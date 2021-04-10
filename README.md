@@ -1,4 +1,6 @@
-# 科学ADV资源站专用同步Action1
+# 本rclone使用官方版，可以使用官方版生成的配置文件
+
+# 科学ADV资源站专用同步Action
 使用[蜜桃猫](https://peachcat.org/archives/996)前辈制作的世纪互联版rclone进行文件迁移,我个人完成了Secret保存配置文件的处理。
 # 使用
 首先Star并Fork本仓库。
