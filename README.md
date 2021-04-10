@@ -1,4 +1,4 @@
-# 科学ADV资源站专用同步Action
+# 科学ADV资源站专用同步Action1
 使用[蜜桃猫](https://peachcat.org/archives/996)前辈制作的世纪互联版rclone进行文件迁移,我个人完成了Secret保存配置文件的处理。
 # 使用
 首先Star并Fork本仓库。
